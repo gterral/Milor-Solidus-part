@@ -1,0 +1,168 @@
+<div class="container-fixed white-bloc">
+  <div class="row">
+    <div class="colonne_gauche_avec_separation col-md-5">
+      <%= form_for "send_mail" do %>
+          <h2>Contactez-nous</h2>
+          <span style="color:red;">* Champs obligatoires</span>
+          <br><br>
+          <table id="tab_contact" style=" border-collapse: separate; border-spacing : 8px">
+            <tbody>
+            <tr>
+              <td>Nom : <span style="color:red;">*</span></td>
+              <td>Prénom : <span style="color:red;">*</span></td>
+            </tr>
+            <tr>
+              <td><%= text_field_tag 'nom', "", class: "form-control", :required => true %></td>
+              <td><%= text_field_tag 'prenom', "", class: "form-control", :required => true %></td>
+            </tr>
+            <tr>
+              <td>Société :</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><%= text_field_tag 'societe', "", class: "form-control" %></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Email : <span style="color:red;">*</span></td>
+              <td>Téléphone :</td>
+            </tr>
+            <tr>
+              <td><%= email_field_tag 'email', "", class: "form-control", :required => true %></td>
+              <td><%= telephone_field_tag 'telephone', "", class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>Adresse :</td>
+              <td>Pays :</td>
+            </tr>
+            <tr>
+              <td><%= text_field_tag 'adresse', "", class: "form-control" %></td>
+              <td><%= text_field_tag 'pays', "", class: "form-control" %></td>
+            </tr>
+            </tbody>
+          </table>
+          <br>
+
+
+          <h2>Message <span style="color:red;">*</span></h2>
+
+          <%= text_area_tag 'message', "", class: "form-control", style: "width:100%;height:250px;", :required => true  %>
+          <br><br>
+          <%= submit_tag "Envoyer", class:"ui-button ui-widget ui-state ui-corner-all", style: "width:100px;padding:2px 5px;"  %>
+          <input type="reset" id="btn_reset" value="Effacer" style="width:100px;padding:2px 5px;" class="ui-button ui-widget ui-state ui-corner-all" role="button" aria-disabled="false">
+      <% end %>
+    </div>
+
+
+
+
+
+    <div style="margin-top: 30px;" class="colonne_droite col-md-6">
+      <h2>Plan d'accès</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10133.056388887351!2d3.1349826508823364!3d50.605991979396556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d64d7432cc3b%3A0x3612f407b2761c9b!2sEcole+Centrale+de+Lille!5e0!3m2!1sfr!2sfr!4v1487184374484" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <br><br>
+      <strong style="color: #f27536;"> Milor</strong>
+      <br><br>
+
+      <table>
+        <tbody>
+        <tr>
+          <strong>Adresse : </strong>
+          Milor Corp, Avenue Paul Langevin - 59950 Villeneuve d'Ascq
+        </tr>
+        <!--
+        <tr>
+          <td style="text-align:right;width:100px;"><strong>Téléphone : </strong></td>
+          <td>+33 (0)1 42 02 80 55</td>
+        </tr>
+        -->
+        </br>
+        <tr>
+          <strong>Email : </strong>
+          <a href="mailto:contact@milor">  contact@milor.io</a>
+        </tr>
+        </tbody>
+      </table>
+      <br><br>
+      <strong> Proximité métro : </strong>4 cantons - Grand Stade
+      <br>
+    </div>
+  </div>
+</div>
+<style>
+
+
+  #tab_contact input, textarea {
+    border: 1px solid silver;
+    border-radius: 4px;
+    background-color: #ffffff;
+  }
+
+  a {
+    text-decoration:none;
+    color:#7596DF;
+  }
+
+  a:hover {
+    color:orangered;
+  }
+
+  a img {
+    border:none;
+  }
+
+  ul.transport li div {
+    display:inline-block;
+    width: 220px;
+  }
+
+  table {
+    width:100%;
+    border-collapse:collapse;
+  }
+
+  td {
+    vertical-align:top;
+  }
+
+  h2 {
+    color: #692425;
+    font-weight:normal;
+    font-size:17pt;
+    padding-bottom:5px;
+    border-bottom:1px solid #CBD1D2;
+    margin-top:0px;
+  }
+
+
+  .colonne_gauche, .colonne_gauche_avec_separation, .colonne_droite {
+    display:inline-block;
+    vertical-align:top;
+
+  }
+
+  .colonne_gauche, .colonne_gauche_avec_separation {
+    padding-right:22px;
+    margin-right:22px;
+  }
+
+  .colonne_gauche_avec_separation {
+    border-right:1px solid #CBD1D2;
+    padding-bottom:22px;
+    margin-top: 30px;
+  }
+
+
+  ul.standard li {
+    margin-bottom:10px;
+  }
+  .ui-button {
+    border: 1px solid #222222;
+    background-color: #692425;
+    font-weight: bold;
+    color: #FFFFFF;
+  }
+
+
+
+</style>

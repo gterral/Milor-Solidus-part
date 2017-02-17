@@ -1,0 +1,35 @@
+
+<!--
+<header id="header" class="row" data-hook>
+  <%#= render :partial => 'spree/shared/nav_bar' %>
+  <%#= render :partial => 'spree/shared/main_nav_bar' if store_menu? %>
+</header> -->
+<header>
+<nav class='navbar navbar-template-blue navbar-static-top' role='navigation'>
+  <div class='container'>
+    <div class='navbar-header'>
+      <a class="navbar-brand" href="/">
+        <span><%= image_tag('logo/logo_white_petit.png', alt:"Logo", class:'logo-1 navbar-brand-logo-spree') %></span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/decision">Trouver un cadeau</a></li>
+        <li><a href="/list_products">Nos produits</a></li>
+        <li><a href="/milor">Milor, késako?</a></li>
+      </ul>
+      <%= content_tag :ul, class: 'nav navbar-nav navbar-right' do %>
+          <li id="link-to-cart" data-hook>
+            <noscript>
+              <%= link_to Spree.t(:cart), '/cart' %>
+            </noscript>
+            &nbsp;
+          </li>
+          <script>Spree.fetch_cart('<%= j spree.cart_link_url %>')</script>
+      <% end %>
+
+    </div>
+
+  </div>
+</nav>
+</header>

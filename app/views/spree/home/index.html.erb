@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Milor, le chien qui trouve les cadeaux en or !</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Fonts -->
+  <!-- Lato -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+
+  <%= stylesheet_link_tag 'spree/frontend/all', :media => 'screen' %>
+  <%= stylesheet_link_tag 'landing/all', :media => 'screen' %>
+  <%= javascript_include_tag 'spree/frontend/all' %>
+
+  <script>
+      $(document).ready(function() {
+          $(window).scroll(function () {
+              if ($(window).scrollTop() > 100) {
+                  $(".navbar-default").addClass("animated");
+              } else {
+                  $(".navbar-default").removeClass('animated');
+              }
+          });
+      });
+
+  </script>
+</head>
+
+
+<body id="body">
+
+
+<!--
+Header start
+==================== -->
+<div class="navbar-default navbar-fixed-top" id="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <span><%= image_tag('logo/logo_white_petit.png', alt:"Logo", class:'logo-1 navbar-brand-logo') %></span>
+        <span><%= image_tag('logo/logo_noir_petit.png', alt:"Logo", class:'logo-2 navbar-brand-logo') %></span>
+        <span class="navbar-brand-text">Milor le chien qui trouve les cadeaux en or !</span>
+        <!-- <img class="logo-1" src="images/logo/logo1.png" alt="LOGO">
+        <img class="logo-2" src="images/logo/logo2.png" alt="LOGO">-->
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <nav class="collapse navbar-collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right" id="top-nav">
+        <li class="current"><a href="#">Acceuil</a></li>
+        <li><a href="/decision">Trouver un cadeau</a></li>
+        <li><a href="/milor">A Propos</a></li>
+        <li><a href="/list_products">Nos produits</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</div>
+
+<section id="hero-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="block">
+          <h1 class="wow fadeInDown">Milor, le chien qui trouve les cadeaux en or ! </h1>
+          <p class="wow fadeInDown" data-wow-delay="0.3s">Le plaisir de Milor, c'est de faire plaisir. Pourtant, ce n'est pas tout simple.. Il faut trouver la bonne idée pour la bonne personne.
+            Devant cette difficulté, la société Wabarter a décidé de créer un algorithme de recherche de cadeau basé sur le machine learning. Ainsi, grâce à Milor et à son flair, nous sommes capable de vous indiquer ce qui est selon nous et selon les autres internautes, les trois meilleurs cadeaux pour votre proche.
+           A ce jour, Milor a aidé plus de 9764 personnes dans leur recherche. Plus de 92% des utilisateurs se déclarent satisfaits de l'utilisation du service, alors pourquoi pas vous ?</p>
+          <div class="wow fadeInDown" data-wow-delay="0.3s">
+            <a class="btn btn-default btn-home" href="/decision" role="button">Trouver un cadeau ! </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 wow zoomIn">
+        <div class="block">
+          <div class="counter text-center">
+            <ul id="countdown_dashboard">
+              <li>
+                <div class="dash days_dash">
+                  <div class="digit">1</div>
+                  <div class="digit">3</div>
+                  <div class="digit">0</div>
+                  <span class="dash_title">Days</span>
+                </div>
+              </li>
+              <li>
+                <div class="dash hours_dash">
+                  <div class="digit">1</div>
+                  <div class="digit">2</div>
+                  <span class="dash_title">Hours</span>
+                </div>
+              </li>
+              <li>
+                <div class="dash minutes_dash">
+                  <div class="digit">1</div>
+                  <div class="digit">4</div>
+                  <span class="dash_title">Minutes</span>
+                </div>
+              </li>
+              <li>
+                <div class="dash seconds_dash">
+                  <div class="digit">1</div>
+                  <div class="digit">0</div>
+                  <span class="dash_title">Seconds</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><!-- .row close -->
+  </div><!-- .container close -->
+</section><!-- header close -->
+
+
+
+<!--
+About start
+==================== -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-sm-12 wow fadeInLeft">
+        <div class="sub-heading">
+          <h3>Milor, en tant que Saint-Hubert, est un fin limier. Le meilleur de sa classe, il résout toutes les affaires.  </h3>
+        </div>
+        <div class="block">
+          <p>Milor est un moteur de recommandation de cadeau. C'est tout simple, remplissez un petit questionnaire au sujet de votre proche, basés sur des questions fermés, et qui vous prendra environ 2 minutes de votre temps.
+          Ensuite, Milor vous trouvera ce qui serait selon lui, selon les autres internautes,les trois meilleurs cadeaux pour votre proche.</p>
+          <p>
+            <strong>Simple, facile & rapide,</strong> Milor se présente comme la solution idéale pour mettre fin à votre recherche de cadeau ! Ne cherchez plus, votre cadeau se trouve sur la page d'après.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-5 col-sm-12 wow fadeInLeft" data-wow-delay="0.3s">
+
+            <div class="about-item">
+              <%= image_tag('ressources/smiley_pensif.png', alt:"Pensif", class:'img-responsive') %>
+            </div>
+
+          </div>
+
+    </div>
+  </div>
+</section><!-- #about close -->
+<!--
+About start
+==================== -->
+
+<!--
+Service start
+==================== -->
+<section id="service" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="heading wow fadeInUp">
+        <h2>Notre service</h2>
+        <p>Basé sur les technologies contemporaines de machine learning, nous vous proposons un service de recommandation de cadeau en nous basant sur les retours des autres internautes. Remplissez un court questionnaire sur la personne visé par le cadeau et nous nous chargeons de le trouver pour vous !</p>
+      </div>
+      <div class="col-sm-6 col-md-3 wow fadeInLeft">
+        <div class="service">
+          <div class="icon-box">
+                            	<span class="icon">
+                                    <i class="ion-happy-outline"></i>
+                                </span>
+          </div>
+          <div class="caption">
+            <h3>Heureux</h3>
+            <p>Avec Milor, vous rendez quelqu'un d'heureux en lui offrant un cadeau qui lui correspond.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.3s">
+        <div class="service">
+          <div class="icon-box">
+                            	<span class="icon">
+                                    <i class="ion-speedometer"></i>
+                                </span>
+          </div>
+          <div class="caption">
+            <h3>Rapide</h3>
+            <p>Avec Milor, ne perdez plus votre temps à réfléchir à quel serait le meilleur cadeau. Milor vous accompagne pour ça.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.6s">
+        <div class="service">
+          <div class="icon-box">
+                            	<span class="icon">
+                                    <i class="ion-cube"></i>
+                                </span>
+          </div>
+          <div class="caption">
+            <h3>Cadeaux</h3>
+            <p>Avec Milor, accédez à un large panel de cadeau parmis lequel vous trouverez le bonheur de votre projet.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.9s">
+        <div class="service">
+          <div class="icon-box">
+                            	<span class="icon">
+                                    <i class="ion-ios-cloud-outline"></i>
+                                </span>
+          </div>
+          <div class="caption">
+            <h3>Cloud sourcing</h3>
+            <p>Avec Milor, ce n'est pas uniquement vous qui choissisez le cadeau. C'est notre communauté.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- .container close -->
+</section><!-- #service close -->
+
+<section id="call-to-action" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 wow text-center">
+        <div class="block">
+          <h2>Le service Milor est toujours en phase de développement.</h2>
+          <p>Nous vous proposons de vous tenir au courant de notre avancée. N'hésitez pas à laisser votre mail.</p>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Entrer votre adresse mail">
+            <button class="btn btn-default btn-submit" type="submit">Etre tenu au courant</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- #call-to-action close -->
+
+<!--
+Contact start
+==================== -->
+<section id="contact" class="section" style="background-color: #f9f9f9">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="block">
+          <div class="heading wow fadeInUp">
+            <h2>Contactez-nous</h2>
+            <p>Milor est en phase de développemnt ainsi nous sommes à la recherche de fonds pour notre projet, n'hésitez pas à nous contacter à ce sujet.<br>
+            De plus, nous sommes également ouvert à toutes propositions ou idées d'améliorations. Merci d'avance.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-5 wow fadeInUp">
+        <div class="block text-left">
+          <div class="sub-heading">
+            <h4>Notre adresse</h4>
+            <p>L'équipe de Milor est en dernière année à l'Ecole Centrale de Lille. Ainsi pour les contacter, vous pouvez tout simplement contacter l'école.</p>
+          </div>
+          <address class="address">
+            <hr>
+            <p>Ecole Centrale de Lille<br>Avenue Paul Langevin<br>Cité Scientifique<br>59650 Villeneuve d'Ascq</p>
+            <hr>
+            <p><strong>Email: </strong>gterral2@gmail.com<br>
+              <strong>Portable: </strong>+33(0)6 83 62 38 49</p>
+
+
+          </address>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-5 col-md-offset-1 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="form-group">
+          <form action="#" method="post" id="contact-form">
+            <div class="input-field">
+              <input type="text" class="form-control" placeholder="Votre nom" name="name">
+            </div>
+            <div class="input-field">
+              <input type="email" class="form-control" placeholder="Votre email" name="email">
+            </div>
+            <div class="input-field">
+              <textarea class="form-control" placeholder="Votre message" rows="3" name="message"></textarea>
+            </div>
+            <button class="btn btn-send" type="submit">Envoyer</button>
+          </form>
+
+          <div id="success">
+            <p>Votre message a bien été envoyé.</p>
+          </div>
+          <div id="error">
+            <p>Votre message n'a pas été envoyé.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section clas="wow fadeInUp">
+  <div class="map-wrapper">
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <p>Copyright Wabarter - Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Js
+<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+<script src="js/vendor/jquery-1.10.2.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src="js/jquery.lwtCountdown-1.0.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/jquery.nav.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/main.js"></script>
+-->
+</body>
+</html>
