@@ -73,3 +73,15 @@ Spree.user_class = "Spree::LegacyUser"
 
 Spree::Money.default_formatting_rules[:symbol_position] = :after
 
+Spree.config do |config|
+  config.use_s3 = true
+  config.s3_bucket = 'milor-dev'
+  config.s3_access_key = ENV['AWS_ACCESS_KEY']
+  config.s3_secret = ENV['AWS_SECRET_KEY']
+  config.attachment_url = ":s3_eu_url"
+  config.s3_host_alias = "s3-eu-west-1.amazonaws.com"
+end
+
+Paperclip.interpolates(:s3_eu_url) do |attachment, style|
+  "#{attachment.s3_protocol}://#{Spree::Config[:s3_host_alias]}/#{attachment.bucket_name}/#{attachment.path(style).gsub(%r{^/},"")}"
+end

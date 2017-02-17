@@ -79,7 +79,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: milor_production
-  username: milor
-  password: <%= ENV['SHOPPR_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  host: <%= ENV['DATABASE_URL'] %>
+  username: <%= ENV['DATABASE_USER'] %>
+  database: <%= ENV['DATABASE_PASSWORD'] %>

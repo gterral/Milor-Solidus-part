@@ -12,3 +12,4 @@ Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w( landing/all.css )
 Rails.application.config.assets.precompile += %w( %.png )
+Rails application.config.assets.precompile += %w( store/all.js store/all.css admin/all.js )
