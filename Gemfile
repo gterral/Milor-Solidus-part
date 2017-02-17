@@ -33,8 +33,8 @@ gem 'solidus'
 gem 'solidus_auth_devise'
 
 # Solidus french
-gem 'globalize', github: 'globalize/globalize'
-gem 'solidus_globalize', github: 'solidusio-contrib/solidus_globalize', branch: 'master'
+#gem 'globalize', github: 'globalize/globalize'
+#gem 'solidus_globalize', github: 'solidusio-contrib/solidus_globalize', branch: 'master'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
