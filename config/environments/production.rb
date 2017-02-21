@@ -76,4 +76,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Ne pas bloquer le load_sample avec problème dûs aux mails car pas de serveur smtp configuré
+  config.action_mailer.raise_delivery_errors = false
 end

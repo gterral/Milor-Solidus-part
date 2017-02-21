@@ -11,3 +11,8 @@ Bienvenue sur Milor, le chien qui trouvera ton cadeau en or !
 --> bundle exec rails g spree:install
 --> rails g solidus:auth:install
 --> rails s
+
+--> heroku pg:reset DATABASE
+--> heroku run rake db:migrate
+--> heroku run rake db:see
+--> heroku run rake spree_sample:load
