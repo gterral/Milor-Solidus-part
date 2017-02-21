@@ -1,10 +1,8 @@
 # This migration comes from spree (originally 20140309033438)
 class CreateStoreFromPreferences < ActiveRecord::Migration
-
   class Store < ActiveRecord::Base
-   self.table_name = 'spree_stores'
+    self.table_name = 'spree_stores'
   end
-
   def change
     preference_store = Spree::Preferences::Store.instance
     if store = Store.where(default: true).first

@@ -33,8 +33,10 @@ gem 'solidus'
 gem 'solidus_auth_devise'
 
 # Solidus french
-gem 'globalize', github: 'globalize/globalize'
-gem 'solidus_globalize', github: 'solidusio-contrib/solidus_globalize', branch: 'master'
+#gem 'globalize', github: 'globalize/globalize'
+#gem 'solidus_globalize', github: 'solidusio-contrib/solidus_globalize', branch: 'master'
+
+gem 'solidus_i18n', github: 'solidusio-contrib/solidus_i18n', branch: 'master'
 
 #Setting AWS
 gem 'aws-sdk'

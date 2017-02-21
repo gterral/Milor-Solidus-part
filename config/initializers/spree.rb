@@ -73,6 +73,7 @@ Spree.user_class = "Spree::LegacyUser"
 
 Spree::Money.default_formatting_rules[:symbol_position] = :after
 
+=begin
 attachment_config = {
 
     s3_credentials: {
@@ -111,3 +112,7 @@ end
   #config.attachment_url = ":s3_eu_url"
   #config.s3_host_alias = "s3-eu-west-1.amazonaws.com"
 #end
+=end
+
+#SolidusI18n::Config.available_locales = [:en, :es, :'pt-BR'] # displayed on frontend select box
+#SolidusGlobalize::Config.supported_locales = [:en, :'pt-BR'] # displayed on translation forms
