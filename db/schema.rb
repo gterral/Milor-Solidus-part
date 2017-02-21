@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170214151857) do
+ActiveRecord::Schema.define(version: 20170221082846) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.string   "content"
+    t.integer  "impact"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.integer  "question_decision_id"
+  end
+
+  add_index "answers", ["question_decision_id"], name: "index_answers_on_question_decision_id", using: :btree
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -28,6 +38,34 @@ ActiveRecord::Schema.define(version: 20170214151857) do
   add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
+
+  create_table "profils", force: :cascade do |t|
+    t.integer  "dim1"
+    t.integer  "dim2"
+    t.integer  "dim3"
+    t.integer  "dim4"
+    t.integer  "dim5"
+    t.integer  "dim6"
+    t.integer  "dim7"
+    t.integer  "dim8"
+    t.integer  "dim9"
+    t.integer  "dim10"
+    t.integer  "dim11"
+    t.integer  "dim12"
+    t.integer  "dim13"
+    t.integer  "dim14"
+    t.integer  "dim15"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "question_decisions", force: :cascade do |t|
+    t.string   "statement"
+    t.string   "typeq"
+    t.integer  "dimension"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "spree_addresses", force: :cascade do |t|
     t.string   "firstname"
@@ -1318,6 +1356,7 @@ ActiveRecord::Schema.define(version: 20170214151857) do
     t.datetime "updated_at"
   end
 
+  add_foreign_key "answers", "question_decisions"
   add_foreign_key "spree_adjustments", "spree_orders", column: "order_id", name: "fk_spree_adjustments_order_id", on_update: :restrict, on_delete: :restrict
   add_foreign_key "spree_product_promotion_rules", "spree_products", column: "product_id"
   add_foreign_key "spree_product_promotion_rules", "spree_promotion_rules", column: "promotion_rule_id"

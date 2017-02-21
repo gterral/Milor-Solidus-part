@@ -1,0 +1,55 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one:
+  statement: "Etes-vous un homme ou une femme ? "
+  typeq: "qtext"
+  dimension: 11
+
+two:
+  statement: "Dans quel contexte réalises-tu un cadeau ?"
+  typeq: "qtext"
+  dimension: 14
+
+third:
+  statement: "Quel est l'age du destinataire du cadeau ? "
+  typeq: "qtext"
+  dimension: 12
+
+four:
+  statement: "Le destinataire est plus intéressé par : "
+  typeq: "qtext"
+  dimension: 3
+
+five:
+  statement: "Il/Elle se déplace jamais sans : "
+  typeq: "qtext"
+  dimension: 5
+
+six:
+  statement: "Quel est son hoppy préféré ? "
+  typeq: "qtext"
+  dimension: 6
+
+seven:
+  statement: "Quelle est la dernière chose qu'il/elle a lu? "
+  typeq: "qtext"
+  dimension: 8
+
+eight:
+  statement: "Dans quelle ville préférais t'il/elle habiter ? "
+  typeq: "qtext"
+  dimension: 3
+
+nine:
+  statement: "Quel adjectif permettrait de le/la qualifier ?"
+  typeq: "qtext"
+  dimension: 1
+
+ten:
+  statement: "Quelle activité lui correspond le mieux ?"
+  typeq: "qtext"
+  dimension: 2
