@@ -11,7 +11,10 @@ Rails.application.routes.draw do
   match '/milor' => 'home#milor', as: :milor, via: [:get]
   match '/list_products' => 'home#list_products', as: :public, via: [:get]
 
-  resources :decision
+  resources :decision do
+    get '/' => 'decision#new'
+    post '/' => 'decision#score'
+  end
 
   end
 

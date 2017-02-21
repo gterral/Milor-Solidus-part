@@ -1,12 +1,12 @@
 <% @body_id = 'cart' %>
-<div data-hook="cart_container">
+<div class='grey-bloc' data-hook="cart_container">
   <h1><%= Spree.t(:shopping_cart) %></h1>
 
   <% if @order.line_items.empty? %>
 
     <div data-hook="empty_cart">
       <p><%= Spree.t(:your_cart_is_empty) %></p>
-      <p><%= link_to Spree.t(:continue_shopping), products_path, :class => 'button continue' %></p>
+      <p><%= link_to Spree.t(:continue_shopping), 'list_products', :class => 'button continue' %></p>
     </div>
 
   <% else %>

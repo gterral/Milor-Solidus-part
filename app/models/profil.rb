@@ -20,21 +20,21 @@ class Profil < ActiveRecord::Base
     ["Objet", 15]
   ]
 
-  attr_accessor :dim1
-  attr_accessor :dim2
-  attr_accessor :dim3
-  attr_accessor :dim4
-  attr_accessor :dim5
-  attr_accessor :dim6
-  attr_accessor :dim7
-  attr_accessor :dim8
-  attr_accessor :dim9
-  attr_accessor :dim10
-  attr_accessor :dim11
-  attr_accessor :dim12
-  attr_accessor :dim13
-  attr_accessor :dim14
-  attr_accessor :dim15
+  #attr_accessor :dim1
+  #attr_accessor :dim2
+  #attr_accessor :dim3
+  #attr_accessor :dim4
+  #attr_accessor :dim5
+  #attr_accessor :dim6
+  #attr_accessor :dim7
+  #attr_accessor :dim8
+  #attr_accessor :dim9
+  #attr_accessor :dim10
+  #attr_accessor :dim11
+  #attr_accessor :dim12
+  #attr_accessor :dim13
+  #attr_accessor :dim14
+  #attr_accessor :dim15
 
   validates :dim1, presence: true
   validates :dim2, presence: true

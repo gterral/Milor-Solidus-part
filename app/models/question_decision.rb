@@ -28,9 +28,10 @@ class QuestionDecision< ActiveRecord::Base
 
   has_many :answers, dependent: :destroy
 
-  attr_accessor :statement
-  attr_accessor :typeq
-  attr_accessor :dimension
+
+  #attr_accessor :statement
+  #attr_accessor :typeq
+  #attr_accessor :dimension
 
   validates :statement, presence: true
   validates :typeq, presence: true

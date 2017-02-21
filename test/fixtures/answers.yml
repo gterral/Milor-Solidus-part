@@ -49,13 +49,13 @@ QuestionThirdAnswerA:
 
 QuestionThirdAnswerB:
   id: 8
-  question_decision: two
+  question_decision: third
   content: "Il/Elle a entre 26 et 50 ans."
   impact: 200
 
 QuestionThirdAnswerC:
   id: 9
-  question_decision: two
+  question_decision: third
   content: "Il/Elle a entre 51 et 100 ans."
   impact: 0
 

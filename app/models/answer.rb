@@ -4,8 +4,8 @@ class Answer < ActiveRecord::Base
   belongs_to :question_decision
   has_one :picture, -> { order(:position) }, as: :viewable, dependent: :destroy, class_name: "Spree::Image"
 
-  attr_accessor :content
-  attr_accessor :impact
+  #attr_accessor :content
+  #attr_accessor :impact
 
   validates :content, presence: true
   validates :impact, presence: true
