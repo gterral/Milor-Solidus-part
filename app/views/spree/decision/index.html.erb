@@ -75,6 +75,8 @@
 
       </div> <!-- reponseq -->
 
+      <div id='rollback-btn' onclick='rollback();' style='display:none;' align="center"><button class="btn btn-danger">Question précédente</button></div>
+
     </div> <!-- jumbotron white -->
   </div> <!-- col-md-12 -->
 </div> <!-- bloc decision -->
@@ -127,6 +129,11 @@ var traiterreponse = function(question,reponse){
     $('#questions').trigger('go');
 };
 
+var rollback = function(){
+    i--;
+    $('#questions').trigger('go');
+    cacherbtnachats();
+};
 
 var cacherphotoreponse = function(){
     $('#reponseaphoto').hide();
@@ -200,6 +207,7 @@ $(document).ready(function(){
         $('#enonceq').show();
         $('#reponsesq').show();
         $('#progress').show();
+        $('#rollback-btn').show();
     });
 
     $('#questions').on('go', function (){
@@ -258,6 +266,8 @@ $(document).ready(function(){
         $('#progress-bar').attr('aria-valuenow',100);
         $('#progress-bar').attr('style','width: 100%;');
         $('#progress-bar').text('100%');
+
+        $('#rollback-btn').hide();
 
         $.ajax('/decision/score', {
             type: 'POST',
