@@ -267,6 +267,10 @@ $(document).ready(function(){
         $('#progress-bar').attr('style','width: 100%;');
         $('#progress-bar').text('100%');
 
+        $('#thumbnaila').attr('onclick',"");
+        $('#thumbnailb').attr('onclick',"");
+        $('#thumbnailc').attr('onclick',"");
+
         $('#rollback-btn').hide();
 
         $.ajax('/decision/score', {
