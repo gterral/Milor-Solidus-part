@@ -41,6 +41,9 @@ gem 'solidus_i18n', github: 'solidusio-contrib/solidus_i18n', branch: 'master'
 #Setting AWS
 gem 'aws-sdk'
 
+#Decision tree
+gem 'decisiontree'
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'

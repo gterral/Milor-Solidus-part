@@ -21,7 +21,6 @@ Spree::HomeController.class_eval do
     def list_products
         @searcher = build_searcher(params.merge(include_images: true))
         @products = @searcher.retrieve_products
-        @taxonomies = Spree::Taxonomy.includes(root: :children)
     end
 
     def milor

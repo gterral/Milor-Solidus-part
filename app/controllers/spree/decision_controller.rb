@@ -1,5 +1,7 @@
 class Spree::DecisionController < Spree::BaseController
   require 'spree/base_controller'
+  require 'rubygems'
+  require 'decisiontree'
 
   def index
   end
@@ -51,6 +53,26 @@ class Spree::DecisionController < Spree::BaseController
   end
 
   def view
+  end
+
+  def train(profil)
+    #Spree::Product.with_property('Dimension')
+    #[0,0,0,0,0,1,1,1,1,1,2,2,2,2,2]
+
+    attributes = ['Ouverture', 'Conscienciosité', 'Extraversion', 'Agréabilité','Neuroticisme', 'Sport','Technologie','Culture','Ecologie','Gastronomie','Genre','Age','Prix','Alcool','Objet']
+    training = []
+
+    Spree::Product.with_property('Dimension').each do |product|
+      training.push(product.properties.dimension,product.id)
+    end
+
+    dec_tree = DecisionTree::ID3Tree.new(attributes, training, 1, :continuous)
+    dec_tree.train
+
+    decision = dec_tree.predict(profil)
+
+    return decision
+
   end
 
 
