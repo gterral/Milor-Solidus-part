@@ -30,7 +30,7 @@ class Spree::DecisionController < Spree::BaseController
       @name = []
       @price = []
 
-      Spree::Product.all.limit(3).each do |product|
+      Spree::Product.order("RANDOM()").limit(3).each do |product|
         @id.push(product.id)
         @url.push(spree.product_path(product))
         @description.push(product.description)
