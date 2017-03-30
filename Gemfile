@@ -39,7 +39,7 @@ gem 'solidus_auth_devise'
 gem 'solidus_i18n', github: 'solidusio-contrib/solidus_i18n', branch: 'master'
 
 #Setting AWS
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 
 #Decision tree
 gem 'decisiontree'
