@@ -85,8 +85,8 @@ attachment_config = {
     s3_headers:     { "Cache-Control" => "max-age=31557600" },
     s3_protocol:    "https",
     bucket:         'milor-dev',
-    url:            ":s3_eu_url",
-
+    url:            ":s3_domain_url",
+    
     styles: {
         mini:     "48x48>",
         small:    "100x100>",
