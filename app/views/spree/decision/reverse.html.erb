@@ -1,0 +1,323 @@
+<div id="bloc_decision" class="row">
+  <div class="col-md-12">
+    <div class="jumbotron">
+      <div class="page-header">
+        <h1>Ouaf Ouaf ! <small>ie bienvenue à toi !</small></h1>
+      </div>
+      <p>Milor est un super chien qui va t'aider à trouver ta cadeau. Pour ce faire, laisse toi guider par le questionnaire ci-dessous et très vite, Milor te dira quels sont les cadeaux les plus susceptibles
+        de faire plaisir à ton proche ! A tres vite ! </p>
+      <div id='progress' class="progress" style="display:none;">
+        <div id="progress-bar" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+          60%
+        </div>
+      </div>
+    </div> <!-- jumbotron -->
+
+
+
+    <div id="questions" class="jumbotron" style="background-color: white;">
+
+      <div id='start-btn' align="center"><button class="btn-start">Démarrer</button></div>
+
+
+      <div id="enonceq" class="enonceq" style="display:none;">
+        <h2>En cours de chargement... </h2>
+      </div>
+
+
+      <div id="reponsesq" class="row" style="display:none;">
+
+        <div class="col-sm-12 col-md-4">
+          <div id="thumbnaila" onclick="" class="thumbnail thumbnail-answer">
+            <img id="reponseaphoto" src="" alt="Photo reponse a">
+            <div class="caption">
+              <div class="panel-heading heading-thumbnail">
+                <h3 id="reponseatitle" class="panel-title">Reponse A</h3></div>
+              <p id="reponsea" name="reponsea" class="answer-p" data="">En cours de chargement</p>
+              <div id='reponsea-btnachats' align="center" style="display:none;">
+                <button class='btn btn-primary' ><a style='color:white;' id='reponsea-btnachats-product' href="">Voir le produit</a></button>
+                <button id='reponsea-btnachats-price' class="btn btn-info" >14 euros</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+          <div id="thumbnailb" onclick="" class="thumbnail thumbnail-answer">
+            <img id="reponsebphoto" src="" alt="Photo reponse b">
+            <div class="caption">
+              <div class="panel-heading heading-thumbnail">
+                <h3 id="reponsebtitle" class="panel-title">Reponse B</h3></div>
+              <p id="reponseb" name="reponsea" class="answer-p" data="">En cours de chargement</p>
+              <div id='reponseb-btnachats' align="center" style="display:none;">
+                <button class='btn btn-primary' ><a style='color:white;' id='reponseb-btnachats-product' href="">Voir le produit</a></button>
+                <button id='reponseb-btnachats-price' class="btn btn-info">14 euros</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+          <div id="thumbnailc" onclick="" class="thumbnail thumbnail-answer">
+            <img id="reponsecphoto" src="" alt="Photo reponse c">
+            <div class="caption">
+              <div class="panel-heading heading-thumbnail">
+                <h3 id="reponsectitle" class="panel-title">Reponse C</h3></div>
+              <p id="reponsec" name="reponsea" class="answer-p" data="">En cours de chargement</p>
+              <div id='reponsec-btnachats' align="center" style="display:none;">
+                <a style='color:white;' id='reponsec-btnachats-product' href=""><button class='btn btn-primary' >Voir le produit</button></a>
+                <button id='reponsec-btnachats-price' class="btn btn-info" style="cursor:auto;" >14 euros</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div> <!-- reponseq -->
+
+      <div id='rollback-btn' onclick='rollback();' style='display:none;' align="center"><button class="btn btn-danger">Question précédente</button></div>
+
+    </div> <!-- jumbotron white -->
+  </div> <!-- col-md-12 -->
+</div> <!-- bloc decision -->
+
+
+<!--
+
+[{"enonce":"Etes-vous un homme ou une femme ? ","reponsea":"Je suis un homme.","reponseb":"Je suis une femme.","reponsec":"Je ne souhaite pas prendre cette r\u00e9ponse en compte.","typetext":"1","impactadim":"1","impactascore":"2","impactbdim":"1","impactbscore":"0","impactcdim":"1","impactcscore":"1","id":"1"},
+{"enonce":"Dans quel contexte r\u00e9alises-tu un cadeau ? ","reponsea":"Il s'agit d'un anniversaire","reponseb":"C'est pour no\u00ebl","reponsec":"Il s'agit d'un d\u00e9part \u00e0 la retraite","typetext":"1","impactadim":"2","impactascore":"2","impactbdim":"2","impactbscore":"0","impactcdim":"2","impactcscore":"1","id":"2"},
+{"enonce":"Quel est l'\u00e2ge du destinataire du cadeau ? ","reponsea":"Il\/Elle a entre 15 et 25 ans.","reponseb":"Il\/Elle a entre 26 et 50 ans.","reponsec":"Il\/Elle a entre 51 et 100 ans.","typetext":"1","impactadim":"3","impactascore":"2","impactbdim":"3","impactbscore":"0","impactcdim":"3","impactcscore":"1","id":"3"},
+{"enonce":"Le destinataire est plus int\u00e9ress\u00e9 par : ","reponsea":"ressources\/question4\/reponsea.jpg","reponseb":"ressources\/question4\/reponseb.jpg","reponsec":"ressources\/question4\/reponsec.jpg","typetext":"0","impactadim":"4","impactascore":"2","impactbdim":"4","impactbscore":"1","impactcdim":"4","impactcscore":"0","id":"4"},
+{"enonce":"Il\/Elle se d\u00e9place jamais sans : ","reponsea":"Son accessoire f\u00e9tiche","reponseb":"Son portable dernier cri","reponsec":"Son antistress personnalis\u00e9","typetext":"1","impactadim":"5","impactascore":"2","impactbdim":"5","impactbscore":"0","impactcdim":"5","impactcscore":"1","id":"5"},
+{"enonce":"Quel est son hoppy pr\u00e9f\u00e9r\u00e9 ? ","reponsea":"Le shopping. Faire chauffer sa carte lui donne des \u00e9motions intenses.","reponseb":"Les soir\u00e9es entre ami(e)s. Pour lui\/elle il n'y a que \u00e7a de vrai !","reponsec":"Le cin\u00e9ma. Il\/Elle conna\u00eet les derni\u00e8res sorties sur le bout des doigts.","typetext":"1","impactadim":"6","impactascore":"2","impactbdim":"6","impactbscore":"1","impactcdim":"6","impactcscore":"0","id":"6"},
+{"enonce":"Quelle est la derni\u00e8re chose qu'il\/elle a lu? ","reponsea":"Le dernier polard sorti en \u00e9dition de poche.","reponseb":"Le journal du m\u00e9tro de ce matin.","reponsec":"Le catalogue de chez IKEA","typetext":"1","impactadim":"7","impactascore":"2","impactbdim":"7","impactbscore":"1","impactcdim":"7","impactcscore":"0","id":"7"},
+{"enonce":"Dans quelle ville pr\u00e9f\u00e9rais t'il\/elle habiter ? ","reponsea":"ressources\/question8\/reponsea.jpg","reponseb":"ressources\/question8\/reponseb.jpg","reponsec":"ressources\/question8\/reponsec.jpg","typetext":"0","impactadim":"8","impactascore":"2","impactbdim":"8","impactbscore":"1","impactcdim":"8","impactcscore":"0","id":"8"},
+{"enonce":"Quel adjectif permettrait de le\/la qualifier ?","reponsea":"Branch\u00e9","reponseb":"Classique","reponsec":"Exotique","typetext":"1","impactadim":"9","impactascore":"2","impactbdim":"9","impactbscore":"1","impactcdim":"9","impactcscore":"0","id":"9"},
+{"enonce":"Quelle activit\u00e9 lui correspond le mieux ?","reponsea":"ressources\/question10\/reponsea.jpg","reponseb":"ressources\/question10\/reponseb.jpg","reponsec":"ressources\/question10\/reponsec.jpg","typetext":"0","impactadim":"10","impactascore":"2","impactbdim":"10","impactbscore":"1","impactcdim":"10","impactcscore":"0","id":"10"}]
+-->
+<!-- $.ajax('/libs/recupquestion.php', {
+        type: 'GET',
+        dataType: 'json',
+        contentType: 'application/json',
+        success: function(data, status, xhttp) {
+            recupreussie(data);},
+        error: function(request,errorType,errorMessage) {
+            erreurderecup(request,errorType,errorMessage);},
+        timeout:3000
+    })
+
+    var erreurderecup = function(request,errorType,errorMessage){
+        return alert('Il y a eu une erreur dans la tentative de recupération des propositions. L\'erreur s\'accompagne du message suivant: ' + errorMessage);
+    };
+
+    var recupreussie = function(reponse){
+        console.log(reponse_serveur);
+        reponse2 = reponse;
+        $('#questions').trigger('go');
+
+    }; -->
+
+<script>
+
+    var reponse_serveur = undefined;
+    var i=0;
+    var tableau_reponse = [];
+
+    var traiterreponse = function(question,reponse){
+        tableau_reponse[i] = reponse;
+        i++;
+        $('#questions').trigger('go');
+    };
+
+    var rollback = function(){
+        i--;
+        $('#questions').trigger('go');
+        cacherbtnachats();
+    };
+
+    var cacherphotoreponse = function(){
+        $('#reponseaphoto').hide();
+        $('#reponsebphoto').hide();
+        $('#reponsecphoto').hide();
+    };
+
+    var montrerphotoreponse = function(){
+        $('#reponseaphoto').show();
+        $('#reponsebphoto').show();
+        $('#reponsecphoto').show();
+    };
+
+    var cachertextreponse = function(){
+        $('#reponsea').hide();
+        $('#reponseb').hide();
+        $('#reponsec').hide();
+    };
+
+    var montrertextreponse = function(){
+        $('#reponsea').show();
+        $('#reponseb').show();
+        $('#reponsec').show();
+    };
+
+    var cacherbtnachats = function(){
+        $('#reponsea-btnachats').hide();
+        $('#reponseb-btnachats').hide();
+        $('#reponsec-btnachats').hide();
+    };
+
+    var montrerbtnachats = function(){
+        $('#reponsea-btnachats').show();
+        $('#reponseb-btnachats').show();
+        $('#reponsec-btnachats').show();
+    };
+
+
+
+    var recupquestions = function (){
+        $.ajax('/decision/new', {
+            type: 'GET',
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function(data, status, xhttp) {
+                recupreussie(data);},
+            error: function(request,errorType,errorMessage) {
+                erreurderecup(request,errorType,errorMessage);},
+            timeout:3000
+        });
+
+        var erreurderecup = function(request,errorType,errorMessage){
+            return alert('Il y a eu une erreur dans la tentative de recupération des propositions. L\'erreur s\'accompagne du message suivant: ' + errorMessage);
+        };
+
+        var recupreussie = function(reponse){
+            console.log(reponse);
+            reponse_serveur = reponse
+            $('#questions').trigger('go');
+
+        };
+    };
+
+
+
+    $(document).ready(function(){
+
+        $('#start-btn').on('click', function () {
+            recupquestions();
+            $('#start-btn').hide();
+            $('#enonceq').show();
+            $('#reponsesq').show();
+            $('#progress').show();
+            $('#rollback-btn').show();
+        });
+
+        $('#questions').on('go', function (){
+            if(i < reponse_serveur.length){
+
+                if (reponse_serveur[i].typeq == 'qtext'){
+
+                    cacherphotoreponse();
+                    montrertextreponse();
+
+
+                    $('#enonceq').html('<h2>' + reponse_serveur[i].statement + '</h2>');
+                    $('#progress-bar').attr('aria-valuenow',i/10*100);
+                    $('#progress-bar').attr('style','width: '+ i/10*100 + '%;');
+                    $('#progress-bar').text(i/10*100 + '%');
+
+                    $('#thumbnaila').attr('onclick',"traiterreponse(" + i + ", 1)");
+                    $('#reponsea').text(reponse_serveur[i].answers[0].content);
+
+                    $('#thumbnailb').attr('onclick',"traiterreponse(" + i + ", 2)");
+                    $('#reponseb').text(reponse_serveur[i].answers[1].content);
+
+                    $('#thumbnailc').attr('onclick',"traiterreponse(" + i + ", 3)");
+                    $('#reponsec').text(reponse_serveur[i].answers[2].content);
+                }
+
+                else
+                {
+
+                    montrerphotoreponse();
+                    cachertextreponse();
+
+                    $('#enonceq').html('<h2>' + reponse_serveur[i].enonce + '</h2>');
+                    $('#progress-bar').attr('aria-valuenow',i/10*100);
+                    $('#progress-bar').attr('style','width: '+ i/10*100 + '%;');
+                    $('#progress-bar').text(i/10*100 + '%');
+
+                    $('#thumbnaila').attr('onclick',"traiterreponse(" + i + ", 1)");
+                    $('#reponseaphoto').attr('src',reponse_serveur[i].reponsea);
+
+                    $('#thumbnailb').attr('onclick',"traiterreponse(" + i + ", 2)");
+                    $('#reponsebphoto').attr('src',reponse_serveur[i].reponseb);
+
+                    $('#thumbnailc').attr('onclick',"traiterreponse(" + i + ", 3)");
+                    $('#reponsecphoto').attr('src',reponse_serveur[i].reponsec);
+                }
+
+            }
+            else {
+                questionnairefin();
+            }
+        });
+
+        var questionnairefin = function(){
+            $('#enonceq').html('<h2>Questionnaire fini.</h2></br><h3> Pourriez vous aider Milor en notant les cadeaux suivants?</h3>');
+            $('#progress-bar').attr('aria-valuenow',100);
+            $('#progress-bar').attr('style','width: 100%;');
+            $('#progress-bar').text('100%');
+
+            $('#thumbnaila').attr('onclick',"");
+            $('#thumbnailb').attr('onclick',"");
+            $('#thumbnailc').attr('onclick',"");
+
+            $('#rollback-btn').hide();
+
+            $.ajax('/decision/random', {
+                type: 'POST',
+                dataType: 'json',
+                data : JSON.stringify(tableau_reponse),
+                contentType: 'application/json',
+                success: function(data, status, xhttp) {
+                    scorereussie(data);},
+                error: function(request,errorType,errorMessage) {
+                    erreurderecup(request,errorType,errorMessage);},
+                timeout:3000
+            });
+
+            var erreurderecup = function(request,errorType,errorMessage){
+                return alert('Il y a eu une erreur dans la tentative de recupération des propositions. L\'erreur s\'accompagne du message suivant: ' + errorMessage);
+            };
+
+            var scorereussie = function(data){
+                console.log(data);
+
+                // Set les titres
+                $('#reponseatitle').text(data.name[0]);
+                $('#reponsebtitle').text(data.name[1]);
+                $('#reponsectitle').text(data.name[2]);
+
+                // Set les descriptions
+                $('#reponsea').text(data.description[0]);
+                $('#reponseb').text(data.description[1]);
+                $('#reponsec').text(data.description[2]);
+
+                // Set les btns
+                montrerbtnachats();
+                $('#reponsea-btnachats-product').attr('href',data.url[0]);
+                $('#reponsea-btnachats-price').text(data.price[0] + ' €');
+
+                $('#reponseb-btnachats-product').attr('href',data.url[1]);
+                $('#reponseb-btnachats-price').text(data.price[0] + ' €');
+
+                $('#reponsec-btnachats-product').attr('href',data.url[2]);
+                $('#reponsec-btnachats-price').text(data.price[0] + ' €');
+            };
+
+
+        };
+
+
+
+    });
+</script>

@@ -86,7 +86,7 @@ attachment_config = {
     s3_protocol:    "https",
     bucket:         'milor-dev',
     url:            ":s3_domain_url",
-    
+
     styles: {
         mini:     "48x48>",
         small:    "100x100>",
