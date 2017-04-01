@@ -1,0 +1,74 @@
+<%= form_for @profil, url: { action: "update", :id => @profil.id } do |f| %>
+  <div class="field">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>
+          #
+        </th>
+        <th>
+          Image
+        </th>
+        <th>
+          Produit
+        </th>
+        <th>
+          Note
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th>
+          1
+        </th>
+        <td>
+          <%= link_to image_tag( Spree::Product.find(@id[0]).display_image.attachment(:small)), Spree::Product.find(@id[0]) %>
+        </td>
+        <td>
+          <%= link_to @name[0], @url[0] %>
+        </td>
+        <td>
+          <%= f.number_field(:item1mark, in: 1.0..20.0, step: 1,:required => true) %>
+        </td>
+      </tr>
+
+      <tr>
+        <th>
+          2
+        </th>
+        <td>
+          <%= link_to image_tag( Spree::Product.find(@id[1]).display_image.attachment(:small)), Spree::Product.find(@id[1]) %>
+        </td>
+        <td>
+          <%= link_to @name[1], @url[1] %>
+        </td>
+        <td>
+          <%= f.number_field(:item2mark, in: 1.0..5.0, step: 1,:required => true) %>
+        </td>
+      </tr>
+
+      <tr>
+        <th>
+          3
+        </th>
+        <td>
+          <%= link_to image_tag( Spree::Product.find(@id[2]).display_image.attachment(:small)), Spree::Product.find(@id[2]) %>
+        </td>
+        <td>
+          <%= link_to @name[2], @url[2] %>
+        </td>
+        <td>
+          <%= f.number_field(:item3mark, in: 1.0..5.0, step: 1,:required => true) %>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="actions">
+    <div id='rollback-btn' align="center">
+    <%= f.submit "Envoyer", :class=> "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

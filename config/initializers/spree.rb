@@ -73,7 +73,8 @@ Spree.user_class = "Spree::LegacyUser"
 
 Spree::Money.default_formatting_rules[:symbol_position] = :after
 
-attachment_config = {
+if Rails.env.production?
+  attachment_config = {
 
     s3_credentials: {
         access_key_id:     ENV['AWS_ACCESS_KEY'],
@@ -102,7 +103,7 @@ attachment_config = {
 attachment_config.each do |key, value|
   Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
 end
-
+end
 
 #SolidusI18n::Config.available_locales = [:en, :es, :'pt-BR'] # displayed on frontend select box
 #SolidusGlobalize::Config.supported_locales = [:en, :'pt-BR'] # displayed on translation forms

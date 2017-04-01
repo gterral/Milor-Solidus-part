@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170221152040) do
+ActiveRecord::Schema.define(version: 20170331162308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,38 @@ ActiveRecord::Schema.define(version: 20170221152040) do
     t.integer  "dimension"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "reverse_profils", force: :cascade do |t|
+    t.integer  "rep1"
+    t.integer  "rep2"
+    t.integer  "rep3"
+    t.integer  "rep4"
+    t.integer  "rep5"
+    t.integer  "rep6"
+    t.integer  "rep7"
+    t.integer  "rep8"
+    t.integer  "rep9"
+    t.integer  "rep10"
+    t.integer  "rep11"
+    t.integer  "rep12"
+    t.integer  "rep13"
+    t.integer  "rep14"
+    t.integer  "rep15"
+    t.integer  "rep16"
+    t.integer  "rep17"
+    t.integer  "rep18"
+    t.integer  "rep19"
+    t.integer  "rep20"
+    t.integer  "item1"
+    t.integer  "item1mark"
+    t.integer  "item2"
+    t.integer  "item2mark"
+    t.integer  "item3"
+    t.integer  "item3mark"
+    t.integer  "instanciation"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "spree_addresses", force: :cascade do |t|

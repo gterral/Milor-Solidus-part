@@ -10,13 +10,18 @@ Rails.application.routes.draw do
   match '/faq' => 'home#faq', as: :faq, via: [:get, :post]
   match '/milor' => 'home#milor', as: :milor, via: [:get]
   match '/list_products' => 'home#list_products', as: :public, via: [:get]
-  match '/reverse'=> 'decision#reverse', as: :reverse, via: [:get, :post]
+  match '/reverse' => 'reverse#update', as: :reverse_profil, via: [:patch]
 
   resources :decision do
     get '/' => 'decision#new'
     post '/' => 'decision#score'
-
   end
+
+  resources :reverse do
+    get '/' => 'reverse#new'
+    post '/' => 'reverse#score'
+  end
+
 
   end
 
