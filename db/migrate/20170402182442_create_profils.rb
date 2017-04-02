@@ -1,6 +1,5 @@
 class CreateProfils < ActiveRecord::Migration
 
-
   def change
     create_table :profils do |t|
       t.integer 'rep1'
