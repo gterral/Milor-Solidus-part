@@ -66,15 +66,13 @@ class ReverseProfil < ActiveRecord::Base
       when 16
         self.rep16 = valeur
       when 17
-        self.rep11 = valeur
+        self.rep17 = valeur
       when 18
-        self.rep12 = valeur
+        self.rep18 = valeur
       when 19
-        self.rep13 = valeur
+        self.rep19 = valeur
       when 20
-        self.rep14 = valeur
-      when 21
-        self.rep15 = valeur
+        self.rep20 = valeur
     end
   end
 

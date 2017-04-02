@@ -5,8 +5,8 @@
 # below each fixture, per the syntax in the comments below
 #
 one:
-  statement: 'Etes-vous un homme ou une femme ?'
-  typeq: 'qtext'
+  statement: "La personne est-elle un homme ou une femme ?"
+  typeq: "qtext"
   dimension: 11
 
 two:
@@ -15,7 +15,7 @@ two:
   dimension: 14
 
 third:
-  statement: "Quel est l'age du destinataire du cadeau ? "
+  statement: "Quel est l'âge du destinataire du cadeau ?"
   typeq: "qtext"
   dimension: 12
 
@@ -25,12 +25,12 @@ four:
   dimension: 3
 
 five:
-  statement: "Il/Elle se déplace jamais sans : "
+  statement: "Il/Elle se déplace jamais sans :"
   typeq: "qtext"
   dimension: 5
 
 six:
-  statement: "Quel est son hoppy préféré ? "
+  statement: "Quel est son hobby préféré ? "
   typeq: "qtext"
   dimension: 6
 
@@ -40,12 +40,12 @@ seven:
   dimension: 8
 
 eight:
-  statement: "Dans quelle ville préférais t'il/elle habiter ? "
+  statement: "Dans quelle ville préférerait-il/elle habiter ? "
   typeq: "qtext"
   dimension: 3
 
 nine:
-  statement: "Quel adjectif permettrait de le/la qualifier ?"
+  statement: "Quel adjectif permettrait le mieux de le/la qualifier ?"
   typeq: "qtext"
   dimension: 1
 
@@ -53,3 +53,53 @@ ten:
   statement: "Quelle activité lui correspond le mieux ?"
   typeq: "qtext"
   dimension: 2
+
+eleven:
+  statement: "La dernière fois qu’il est allé au cinéma / voir une pièce de théâtre …"
+  typeq: "qtext"
+  dimension: 5
+
+twelve:
+  statement: "La musique …"
+  typeq: "qtext"
+  dimension: 1
+
+thirteen:
+  statement: "Tu organises une soirée jeux de société ..."
+  typeq: "qtext"
+  dimension: 2
+
+fourteen:
+  statement: "Il est plutôt …"
+  typeq: "qtext"
+  dimension: 3
+
+fifteen:
+  statement: "Ses vacances préférées ?"
+  typeq: "qtext"
+  dimension: 4
+
+sixteen:
+  statement: "C'est une personne ..."
+  typeq: "qtext"
+  dimension: 5
+
+seventeen:
+  statement: "Dans ses relations, il/elle ..."
+  typeq: "qtext"
+  dimension: 6
+
+eighteen:
+  statement: "Tu lui organises une soirée surprise :"
+  typeq: "qtext"
+  dimension: 7
+
+nineteen:
+  statement: "Il/elle ..."
+  typeq: "qtext"
+  dimension: 8
+
+twenty:
+  statement: "Ce soir, c'est apéro à la maison ..."
+  typeq: "qtext"
+  dimension: 9

@@ -1,6 +1,6 @@
 class Profil < ActiveRecord::Base
 
-  after_initialize :set_defaults
+  #"#{after_initialize :set_defaults
 
   DIMENSION_TYPES = [
     ["Ouverture", 1],
@@ -36,57 +36,49 @@ class Profil < ActiveRecord::Base
   #attr_accessor :dim14
   #attr_accessor :dim15
 
-  validates :dim1, presence: true
-  validates :dim2, presence: true
-  validates :dim3, presence: true
-  validates :dim4, presence: true
-  validates :dim5, presence: true
-  validates :dim6, presence: true
-  validates :dim7, presence: true
-  validates :dim8, presence: true
-  validates :dim9, presence: true
-  validates :dim10, presence: true
-  validates :dim11, presence: true
-  validates :dim12, presence: true
-  validates :dim13, presence: true
-  validates :dim14, presence: true
-  validates :dim15, presence: true
 
-
-
-
-  def update_dim(numDimension,valeur)
-    case numDimension
+  def update_rep(numRep,valeur)
+    case numRep
       when 1
-        self.dim1 = valeur
+        self.rep1 = valeur
       when 2
-        self.dim2 = valeur
+        self.rep2 = valeur
       when 3
-        self.dim3 = valeur
+        self.rep3 = valeur
       when 4
-        self.dim4 = valeur
+        self.rep4 = valeur
       when 5
-        self.dim5 = valeur
+        self.rep5 = valeur
       when 6
-        self.dim6 = valeur
+        self.rep6 = valeur
       when 7
-        self.dim7 = valeur
+        self.rep7 = valeur
       when 8
-        self.dim8 = valeur
+        self.rep8 = valeur
       when 9
-        self.dim9 = valeur
+        self.rep9 = valeur
       when 10
-        self.dim10 = valeur
+        self.rep10 = valeur
       when 11
-        self.dim1 = valeur
+        self.rep11 = valeur
       when 12
-        self.dim12 = valeur
+        self.rep12 = valeur
       when 13
-        self.dim13 = valeur
+        self.rep13 = valeur
       when 14
-        self.dim14 = valeur
+        self.rep14 = valeur
       when 15
-        self.dim15 = valeur
+        self.rep15 = valeur
+      when 16
+        self.rep16 = valeur
+      when 17
+        self.rep17 = valeur
+      when 18
+        self.rep18 = valeur
+      when 19
+        self.rep19 = valeur
+      when 20
+        self.rep20 = valeur
     end
   end
 
@@ -94,21 +86,27 @@ class Profil < ActiveRecord::Base
   private
 
   def set_defaults
-    self.dim1 = 0
-    self.dim2 = 0
-    self.dim3 = 0
-    self.dim4 = 0
-    self.dim5 = 0
-    self.dim6 = 0
-    self.dim7 = 0
-    self.dim8 = 0
-    self.dim9 = 0
-    self.dim10 = 0
-    self.dim11 = 0
-    self.dim12 = 0
-    self.dim13 = 0
-    self.dim14 = 0
-    self.dim15 = 0
+    self.rep1 = 0
+    self.rep2 = 0
+    self.rep3 = 0
+    self.rep4 = 0
+    self.rep5 = 0
+    self.rep6 = 0
+    self.rep7 = 0
+    self.rep8 = 0
+    self.rep8 = 0
+    self.rep9 = 0
+    self.rep10 = 0
+    self.rep11 = 0
+    self.rep12 = 0
+    self.rep13 = 0
+    self.rep14 = 0
+    self.rep15 = 0
+    self.rep16 = 0
+    self.rep17 = 0
+    self.rep18 = 0
+    self.rep19 = 0
+    self.rep20 = 0
   end
 
 end

@@ -21,13 +21,10 @@ class Spree::DecisionController < Spree::BaseController
     @profil = Profil.new
 
     params[:decision]['_json'].each_with_index do |reponse,index|
-      @profil.update_dim(Answer.find(index+1).question_decision.dimension,Answer.find((index+1)*reponse).impact)
+      @profil.update_rep((index+1),reponse)
     end
 
-    @profil.update_attribute('instanciation',true)
-
     if @profil.save
-
       @url= []
       @id = []
       @description = []
@@ -41,6 +38,7 @@ class Spree::DecisionController < Spree::BaseController
         @name.push(product.slug)
         @price.push(product.price.to_s)
       end
+
       render :json => {'id' => @id, 'url' => @url, 'description' => @description,'name' => @name,'price'=>@price}
     else
       render :json => 'error'.to_json

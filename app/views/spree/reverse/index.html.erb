@@ -184,9 +184,9 @@
 
 
                     $('#enonceq').html('<h2>' + reponse_serveur[i].statement + '</h2>');
-                    $('#progress-bar').attr('aria-valuenow',i/10*100);
-                    $('#progress-bar').attr('style','width: '+ i/10*100 + '%;');
-                    $('#progress-bar').text(i/10*100 + '%');
+                    $('#progress-bar').attr('aria-valuenow',i/20*100);
+                    $('#progress-bar').attr('style','width: '+ i/20*100 + '%;');
+                    $('#progress-bar').text(i/20*100 + '%');
 
                     $('#thumbnaila').attr('onclick',"traiterreponse(" + i + ", 1)");
                     $('#reponsea').text(reponse_serveur[i].answers[0].content);
@@ -205,9 +205,9 @@
                     cachertextreponse();
 
                     $('#enonceq').html('<h2>' + reponse_serveur[i].enonce + '</h2>');
-                    $('#progress-bar').attr('aria-valuenow',i/10*100);
-                    $('#progress-bar').attr('style','width: '+ i/10*100 + '%;');
-                    $('#progress-bar').text(i/10*100 + '%');
+                    $('#progress-bar').attr('aria-valuenow',i/20*100);
+                    $('#progress-bar').attr('style','width: '+ i/20*100 + '%;');
+                    $('#progress-bar').text(i/20*100 + '%');
 
                     $('#thumbnaila').attr('onclick',"traiterreponse(" + i + ", 1)");
                     $('#reponseaphoto').attr('src',reponse_serveur[i].reponsea);

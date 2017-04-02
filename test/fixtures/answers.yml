@@ -32,7 +32,7 @@ QuestionTwoAnswerA:
 QuestionTwoAnswerB:
   id: 5
   question_decision: two
-  content: "C'est pour noël"
+  content: "C'est pour Noël"
   impact: 200
 
 QuestionTwoAnswerC:
@@ -116,7 +116,7 @@ QuestionSixAnswerC:
 QuestionSevenAnswerA:
   id: 19
   question_decision: seven
-  content: "Le dernier polard sorti en édition de poche."
+  content: "Le dernier polar sorti en édition de poche."
   impact: 100
 
 QuestionSevenAnswerB:
@@ -134,19 +134,19 @@ QuestionSevenAnswerC:
 QuestionEightAnswerA:
   id: 22
   question_decision: eight
-  content: "Paris"
+  content: "Paris et sa culture"
   impact: 100
 
 QuestionEightAnswerB:
   id: 23
   question_decision: eight
-  content: "Londres"
+  content: "Berlin et sa scène électro"
   impact: 200
 
 QuestionEightAnswerC:
   id: 24
   question_decision: eight
-  content: "Sydney"
+  content: "Sydney et ses plages"
   impact: 0
 
 QuestionNineAnswerA:
@@ -170,17 +170,197 @@ QuestionNineAnswerC:
 QuestionTenAnswerA:
   id: 28
   question_decision: ten
-  content: "Partir surfer en Australie."
+  content: "Aller explorer la ville où il/elle habite dans ses moindres recoins"
   impact: 100
 
-QuestionNineAnswerB:
+QuestionTenAnswerB:
   id: 29
   question_decision: ten
   content: "Aller au ciné en amoureux."
   impact: 200
 
-QuestionNineAnswerC:
+QuestionTenAnswerC:
   id: 30
   question_decision: ten
   content: "Se rendre à un meeting politique."
+  impact: 0
+
+QuestionElevenAnswerA:
+  id: 31
+  question_decision: eleven
+  content: "Il y a moins d’une semaine"
+  impact: 100
+
+QuestionElevenAnswerB:
+  id: 32
+  question_decision: eleven
+  content: "Il y a moins d’un mois"
+  impact: 200
+
+QuestionElevenAnswerC:
+  id: 33
+  question_decision: eleven
+  content: "Il n’y va que très rarement"
+  impact: 0
+
+QuestionTwelveAnswerA:
+  id: 34
+  question_decision: twelve
+  content: "C’est sa passion"
+  impact: 100
+
+QuestionTwelveAnswerB:
+  id: 35
+  question_decision: twelve
+  content: "Il écoute ça de temps en temps"
+  impact: 200
+
+QuestionTwelveAnswerC:
+  id: 36
+  question_decision: twelve
+  content: "Il déteste ça !"
+  impact: 0
+
+QuestionThirteenAnswerA:
+  id: 37
+  question_decision: thirteen
+  content: "Il vient à coup sûr, il adore ça !"
+  impact: 100
+
+QuestionThirteenAnswerB:
+  id: 38
+  question_decision: thirteen
+  content: "Il fera acte de présence"
+  impact: 200
+
+QuestionThirteenAnswerC:
+  id: 39
+  question_decision: thirteen
+  content: "Il trouvera une excuse"
+  impact: 0
+
+QuestionFourteenAnswerA:
+  id: 40
+  question_decision: fourteen
+  content: "Super branché technologie : il est toujours au courant des derniers gadgets !"
+  impact: 100
+
+QuestionFourteenAnswerB:
+  id: 41
+  question_decision: fourteen
+  content: "Orienté lecture : les classiques français n’ont pas de secret pour lui !"
+  impact: 200
+
+QuestionFourteenAnswerC:
+  id: 42
+  question_decision: fourteen
+  content: "Proche de la nature : il adore les balades !"
+  impact: 0
+
+QuestionFifteenAnswerA:
+  id: 43
+  question_decision: fifteen
+  content: "Partir surfer en Australie."
+  impact: 100
+
+QuestionFifteenAnswerB:
+  id: 44
+  question_decision: fifteen
+  content: "Partir à l'aventure en Amérique du Sud"
+  impact: 200
+
+QuestionFifteenAnswerC:
+  id: 45
+  question_decision: fifteen
+  content: "Se relaxer en Ardèche"
+  impact: 0
+
+QuestionSixteenAnswerA:
+  id: 46
+  question_decision: sixteen
+  content: "Qui garde toujours son calme"
+  impact: 100
+
+QuestionSixteenAnswerB:
+  id: 47
+  question_decision: sixteen
+  content: "Qui s'emporte facilement"
+  impact: 200
+
+QuestionSixteenAnswerC:
+  id: 48
+  question_decision: sixteen
+  content: "Qui est un peu insouciante"
+  impact: 0
+
+QuestionSeventeenAnswerA:
+  id: 49
+  question_decision: seventeen
+  content: "A plutôt tendance à avoir quelques très bons amis"
+  impact: 100
+
+QuestionSeventeenAnswerB:
+  id: 50
+  question_decision: seventeen
+  content: "Adore faire de nouvelles rencontres"
+  impact: 200
+
+QuestionSeventeenAnswerC:
+  id: 51
+  question_decision: seventeen
+  content: "Est plutôt individualiste"
+  impact: 0
+
+QuestionEighteenAnswerA:
+  id: 52
+  question_decision: eighteen
+  content: "Il est super heureux, il adore les imprévus !"
+  impact: 100
+
+QuestionEighteenAnswerB:
+  id: 53
+  question_decision: eighteen
+  content: "Il apprécie le geste, mais il est déçu de l'endroit choisi : il aurait préféré faire ça lui-même"
+  impact: 200
+
+QuestionEighteenAnswerC:
+  id: 54
+  question_decision: eighteen
+  content: "Ca gâche complètement ses plans : il est plutôt dérangé !"
+  impact: 0
+
+QuestionNineteenAnswerA:
+  id: 55
+  question_decision: nineteen
+  content: "Fais très attention à sa personne : il/elle est toujours parfaitement présentable !"
+  impact: 100
+
+QuestionNineteenAnswerB:
+  id: 56
+  question_decision: nineteen
+  content: "S'habille bien pour les occasions, mais n'y fais pas trop attention sinon"
+  impact: 200
+
+QuestionNineteenAnswerC:
+  id: 57
+  question_decision: nineteen
+  content: "Se concentre sur sa beauté intérieure plutôt que sa beauté extérieure !"
+  impact: 0
+
+QuestionTwentyAnswerA:
+  id: 58
+  question_decision: twenty
+  content: "C'est parfait, c'est un(e) bon(ne) vivant(e) ! Il/elle ramènera une bonne bouteille de Bordeaux."
+  impact: 100
+
+QuestionTwentyAnswerB:
+  id: 59
+  question_decision: twenty
+  content: "Ca lui convient parfaitement, mais attention, pas d'alcool ! Il/elle a un rythme de vie très sain"
+  impact: 200
+
+QuestionTwentyAnswerC:
+  id: 60
+  question_decision: twenty
+  content: "Ca lui est un peu égal : il faut manger pour vivre, et pas vivre pour manger"
   impact: 0
