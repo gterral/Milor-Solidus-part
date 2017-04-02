@@ -1,5 +1,6 @@
 <%= form_for @profil, url: { action: "update", :id => @profil.id } do |f| %>
   <div class="field">
+    <p>Vous pouvez noter les 3 cadeaux ci-dessous en leur attribuant une note allant de 1 à 5.</p>
     <table class="table table-striped">
       <thead>
       <tr>
@@ -26,7 +27,7 @@
           <%= link_to image_tag( Spree::Product.find(@id[0]).display_image.attachment(:small)), Spree::Product.find(@id[0]) %>
         </td>
         <td>
-          <%= link_to @name[0], @url[0] %>
+          <%= link_to @name[0], @url[0],:target => "_blank" %>
         </td>
         <td>
           <%= f.number_field(:item1mark, in: 1.0..20.0, step: 1,:required => true) %>
@@ -41,7 +42,7 @@
           <%= link_to image_tag( Spree::Product.find(@id[1]).display_image.attachment(:small)), Spree::Product.find(@id[1]) %>
         </td>
         <td>
-          <%= link_to @name[1], @url[1] %>
+          <%= link_to @name[1], @url[1], :target => "_blank" %>
         </td>
         <td>
           <%= f.number_field(:item2mark, in: 1.0..5.0, step: 1,:required => true) %>
@@ -56,7 +57,7 @@
           <%= link_to image_tag( Spree::Product.find(@id[2]).display_image.attachment(:small)), Spree::Product.find(@id[2]) %>
         </td>
         <td>
-          <%= link_to @name[2], @url[2] %>
+          <%= link_to @name[2], @url[2], :target => "_blank" %>
         </td>
         <td>
           <%= f.number_field(:item3mark, in: 1.0..5.0, step: 1,:required => true) %>
