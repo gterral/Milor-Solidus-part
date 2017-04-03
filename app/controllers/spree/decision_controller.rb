@@ -84,13 +84,17 @@ class Spree::DecisionController < Spree::BaseController
 
   end
 
-  def calcul(profil)
-
-    profil = []
+  def test_algo
+    profil =[]
 
     for i in 0..18
-      profil.push(1)
+          profil.push(1)
     end
+
+    return calcul(profil)
+  end
+
+  def calcul(profil)
 
     indice_pro = profil_return(profil)
     tab_score = calcul_score(indice_pro)
