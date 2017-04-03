@@ -44,6 +44,9 @@ gem 'aws-sdk', '< 2.0'
 #Decision tree
 gem 'decisiontree'
 
+#equivalent numpy python
+gem 'narray'
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'
