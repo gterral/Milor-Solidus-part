@@ -71,4 +71,23 @@ class Spree::DecisionController < Spree::BaseController
 
   end
 
+  def test
+    p 'test'
+    p @la
+
+    tableauprofil = ReverseProfil.where('instanciation':1).all
+
+    @tab = []
+
+    tableauprofil.each do |profil|
+      tableau = []
+      tableau.push(profil.rep1,profil.rep2,profil.rep3,profil.rep4,profil.rep5,profil.rep6,profil.rep7,profil.rep8,profil.rep9,profil.rep10,profil.rep11,profil.rep12,profil.rep13,profil.rep14,profil.rep15,profil.rep16,profil.rep17,profil.rep18,profil.rep19,profil.rep20,profil.item1,profil.item1mark,profil.item2,profil.item2mark,profil.item3,profil.item3mark)
+      @tab.push(tableau)
+    end
+
+    p 'ici tableau fini'
+    p @tab
+
+  end
+
 end
