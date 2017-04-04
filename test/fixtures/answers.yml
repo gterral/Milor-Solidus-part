@@ -8,13 +8,13 @@
 QuestionOneAnswerA:
   id: 1
   question_decision: one
-  content: "Je suis un homme."
+  content: "Il s'agit d'un homme."
   impact: 100
 
 QuestionOneAnswerB:
   id: 2
   question_decision: one
-  content: "Je suis une femme."
+  content: "Il s'agit d'une femme."
   impact: 200
 
 QuestionOneAnswerC:
@@ -26,7 +26,7 @@ QuestionOneAnswerC:
 QuestionTwoAnswerA:
   id: 4
   question_decision: two
-  content: "Il s'agit d'un anniversaire."
+  content: "C'est son anniversaire."
   impact: 100
 
 QuestionTwoAnswerB:
@@ -200,7 +200,7 @@ QuestionElevenAnswerB:
 QuestionElevenAnswerC:
   id: 33
   question_decision: eleven
-  content: "Il n’y va que très rarement"
+  content: "Il/Elle n’y va que très rarement"
   impact: 0
 
 QuestionTwelveAnswerA:
@@ -212,49 +212,49 @@ QuestionTwelveAnswerA:
 QuestionTwelveAnswerB:
   id: 35
   question_decision: twelve
-  content: "Il écoute ça de temps en temps"
+  content: "Il/Elle écoute ça de temps en temps"
   impact: 200
 
 QuestionTwelveAnswerC:
   id: 36
   question_decision: twelve
-  content: "Il déteste ça !"
+  content: "Il/Elle déteste ça !"
   impact: 0
 
 QuestionThirteenAnswerA:
   id: 37
   question_decision: thirteen
-  content: "Il vient à coup sûr, il adore ça !"
+  content: "Il/Elle vient à coup sûr, il/elle adore ça !"
   impact: 100
 
 QuestionThirteenAnswerB:
   id: 38
   question_decision: thirteen
-  content: "Il fera acte de présence"
+  content: "Il/Elle fera acte de présence"
   impact: 200
 
 QuestionThirteenAnswerC:
   id: 39
   question_decision: thirteen
-  content: "Il trouvera une excuse"
+  content: "Il/Elle trouvera une excuse"
   impact: 0
 
 QuestionFourteenAnswerA:
   id: 40
   question_decision: fourteen
-  content: "Super branché technologie : il est toujours au courant des derniers gadgets !"
+  content: "Super branché technologie : il/elle est toujours au courant des derniers gadgets !"
   impact: 100
 
 QuestionFourteenAnswerB:
   id: 41
   question_decision: fourteen
-  content: "Orienté lecture : les classiques français n’ont pas de secret pour lui !"
+  content: "Orienté lecture : les classiques français n’ont pas de secret pour lui/elle !"
   impact: 200
 
 QuestionFourteenAnswerC:
   id: 42
   question_decision: fourteen
-  content: "Proche de la nature : il adore les balades !"
+  content: "Proche de la nature : il/elle adore les balades !"
   impact: 0
 
 QuestionFifteenAnswerA:
@@ -314,19 +314,19 @@ QuestionSeventeenAnswerC:
 QuestionEighteenAnswerA:
   id: 52
   question_decision: eighteen
-  content: "Il est super heureux, il adore les imprévus !"
+  content: "Il/Elle est super heureux, il/elle adore les imprévus !"
   impact: 100
 
 QuestionEighteenAnswerB:
   id: 53
   question_decision: eighteen
-  content: "Il apprécie le geste, mais il est déçu de l'endroit choisi : il aurait préféré faire ça lui-même"
+  content: "Il/Elle apprécie le geste, mais il/elle est déçu de l'endroit choisi : il/elle aurait préféré faire ça lui-même"
   impact: 200
 
 QuestionEighteenAnswerC:
   id: 54
   question_decision: eighteen
-  content: "Ca gâche complètement ses plans : il est plutôt dérangé !"
+  content: "Ca gâche complètement ses plans : il/elle est plutôt dérangé !"
   impact: 0
 
 QuestionNineteenAnswerA:
@@ -338,13 +338,13 @@ QuestionNineteenAnswerA:
 QuestionNineteenAnswerB:
   id: 56
   question_decision: nineteen
-  content: "S'habille bien pour les occasions, mais n'y fais pas trop attention sinon"
+  content: "Il/Elle s'habille bien pour les occasions, mais n'y fais pas trop attention sinon"
   impact: 200
 
 QuestionNineteenAnswerC:
   id: 57
   question_decision: nineteen
-  content: "Se concentre sur sa beauté intérieure plutôt que sa beauté extérieure !"
+  content: "Il/Elle se concentre sur sa beauté intérieure plutôt que sa beauté extérieure !"
   impact: 0
 
 QuestionTwentyAnswerA:
