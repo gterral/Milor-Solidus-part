@@ -32,6 +32,7 @@ class Spree::DecisionController < Spree::BaseController
       @description = []
       @name = []
       @price = []
+      @image = []
 
       tab_a_chercher = calcul(reponse)
 
@@ -42,6 +43,7 @@ class Spree::DecisionController < Spree::BaseController
               @description.push(product.description)
               @name.push(product.slug)
               @price.push(product.price.to_s)
+              @image.push(product.display_image.attachment(:small))
             end
       end
 
@@ -53,7 +55,7 @@ class Spree::DecisionController < Spree::BaseController
         #@price.push(product.price.to_s)
       #end
 
-      render :json => {'id' => @id, 'url' => @url, 'description' => @description,'name' => @name,'price'=>@price}
+      render :json => {'id' => @id, 'url' => @url, 'description' => @description,'name' => @name,'price'=>@price, 'image'=>@image}
     else
       render :json => 'error'.to_json
     end

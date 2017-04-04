@@ -262,7 +262,7 @@ $(document).ready(function(){
     });
 
     var questionnairefin = function(){
-        $('#enonceq').html('<h2>Questionnaire fini. Milor a selectionne pour vous les cadeaux suivants:</h2>');
+        $('#enonceq').html('<h2>Questionnaire fini. Milor a selectionné pour vous les cadeaux suivants:</h2>');
         $('#progress-bar').attr('aria-valuenow',100);
         $('#progress-bar').attr('style','width: 100%;');
         $('#progress-bar').text('100%');
@@ -298,9 +298,15 @@ $(document).ready(function(){
             $('#reponsectitle').text(data.name[2]);
 
             // Set les descriptions
-            $('#reponsea').text(data.description[0]);
-            $('#reponseb').text(data.description[1]);
-            $('#reponsec').text(data.description[2]);
+            $('#reponsea').text(data.description[0].substr(0,300));
+            $('#reponseb').text(data.description[1].substr(0,300));
+            $('#reponsec').text(data.description[2].substr(0,300));
+
+            //Set les images
+            montrerphotoreponse();
+            $('#reponseaphoto').attr('src',data.image[0]);
+            $('#reponsebphoto').attr('src',data.image[0]);
+            $('#reponsecphoto').attr('src',data.image[0]);
 
             // Set les btns
             montrerbtnachats();
